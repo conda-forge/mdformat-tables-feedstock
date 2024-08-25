@@ -1,5 +1,5 @@
 {% set name = "mdformat-tables" %}
-{% set version = "0.4.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mdformat_tables-{{ version }}.tar.gz
-  sha256: 3024e88e9d29d7b8bb07fd6b59c9d5dcf14d2060122be29e30e72d27b65d7da9
+  sha256: a57db1ac17c4a125da794ef45539904bb8a9592e80557d525e1f169c96daa2c8
 
 build:
   noarch: python
@@ -16,12 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - flit-core >=2,<4
     - pip
   run:
-    - python >=3.6
-    - mdformat >=0.7.5,<0.8.0
+    - python >=3.7
+    - mdformat <0.8.0,>=0.7.5
+    - wcwidth >=0.2.13
 
 test:
   imports:
