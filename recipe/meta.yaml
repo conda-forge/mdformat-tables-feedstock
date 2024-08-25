@@ -16,12 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - flit-core >=2,<4
     - pip
   run:
-    - python >=3.6
-    - mdformat >=0.7.5,<0.8.0
+    - python >=3.7
+    - mdformat <0.8.0,>=0.7.5
+    - wcwidth >=0.2.13
 
 test:
   imports:
